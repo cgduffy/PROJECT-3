@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
+  background-color: #fff;
   margin: 0 auto;
   text-align: center;
 }
@@ -31,13 +32,15 @@ p {
 /****************************
   HEADER AND CTA
 ****************************/
-h1 {
+header {
   margin: 0;
-  font-size: 20px;
-  color: white;
-  background-color: #333;
-  text-transform: uppercase;
+  background-color: #40a5a0;
   padding: 27px 0;
+}
+h1 {
+  font-size: 20px; 
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .cta {
@@ -74,8 +77,8 @@ form {
 
 fieldset {
   margin: 28px 0 0;
-  border: none;
   padding: 5px 0 30px 0;
+  border: none;
 }
 
 .contact-header {
@@ -87,23 +90,24 @@ input[type="email"],
 input[type="tel"],
 textarea,
 select {
-  border: none;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
+  color: #333;
+  background-color: #d1dde0;
   height: auto;
+  width: 100%;
   margin: 0;
   outline: 0;
   padding: 15px;
-  width: 100%;
-  background-color: #f0f4f5;
-  color: #8a97a0;
-  border-radius: 5px;
-  font-family: "Raleway", sans-serif;
+  border-radius: 6px;
+  border: none;
+
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid rgba(70, 105, 139, 1);
+  border: 2px #000;
 }
 
 /******************
@@ -134,7 +138,7 @@ select {
 button {
   padding: 20px 40px 20px 40px;
   color: #FFF;
-  background-color: #91d4d1;
+  background-color: #40a5a0;
   font-size: 20px;
   text-align: center;
   border-radius: 5px;
@@ -152,12 +156,12 @@ button {
 }
 
 label {
-  display: inline-block;
   margin: 5px 0 15px;
-  color: #4c5a67;
+  color: #000;
   font-size: 14px;
   cursor: pointer;
   position: relative;
+  display: inline-block;
 }
 
 #zip {
@@ -208,19 +212,19 @@ input[type=checkbox]:checked + label:before {
   content: "\2713";
   font-family: "droid-sans", sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #40a5a0;
   text-align: center;
   line-height: 15px;
-  border: 2px solid #000;
+  border: 2px solid #40a5a0;
 }
 
 input[type=radio]:checked + label:before {
   content: "\2022";
-  color: #000;
+  color: #40a5a0;
   font-size: 30px;
   text-align: center;
   line-height: 15px;
-  border: 1px solid #000;
+  border: 1px solid #40a5a0;
 }
 
 .input {
@@ -237,7 +241,7 @@ textarea {
 }
 
 /************************************
-      LARGER SCREENS
+      MEDIUM SCREENS
 ************************************/
 @media screen and (min-width: 760px) {
 
@@ -261,7 +265,7 @@ textarea {
   }
   .contact label {
     float: left;
-    width: 25%;
+    width: 30%;
     margin: auto 0;
     padding: 15px 0 35px;
     clear: both;
@@ -274,3 +278,26 @@ textarea {
     float: right;
   }
 }
+
+/************************************
+      LARGER SCREENS
+************************************/
+@media screen and (min-width: 1080px) {
+  .header {
+    font-size: 26px;
+  }
+  .cta
+  ,
+  form {
+    max-width: 800px;
+  }
+
+  h2 {
+    margin-top: 35px;
+  }
+  #zip {
+    width: 15%;
+    float: left;
+  }
+}
+
